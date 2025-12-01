@@ -1,0 +1,16 @@
+@page
+@model IndexModel
+
+<h2>SQLite Test</h2>
+
+<form method="post">
+    <input type="text" name="NewItem" placeholder="Назва">
+    <button type="submit">Додати</button>
+</form>
+
+<ul>
+@foreach (var item in Model.Items)
+{
+    <li>@item.Name</li>
+}
+</ul>
